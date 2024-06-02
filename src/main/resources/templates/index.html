@@ -5,9 +5,9 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1 th:text="${welcome_msg}"></h1>
+    <h1 th:text="${welcomeMsg}"></h1>
     <h2>Add a user Data</h2>
-    <p th:text="${success_msg}"></p>
+    <p th:text="${successMsg}"></p>
     <form th:action="@{/submit}" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" />
@@ -24,6 +24,6 @@
         <button type="submit">Submit</button>
     </form>
     <br/>
-    <button type="button">View All Data</button>
+    <button type="button" onclick="window.location.href='/allUser';">All User Data</button>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All User Data</title>
+</head>
+<body>
+    <h1>View All User Data</h1>
+    <table style="border: 1px solid black; border-collapse: collapse; width: 40%;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </table>
+    <br/>
+    <button type="button" onclick="window.location.href='/';">Back to Home</button>
+</body>
+</html>
